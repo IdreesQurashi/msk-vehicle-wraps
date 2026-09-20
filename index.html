@@ -1473,33 +1473,9 @@
       }
 
       function validateClient() {
-        let isValid = true;
         clearErrors();
-
-        const name = document.getElementById('fullName').value.trim();
-        const phone = document.getElementById('phone').value.trim();
-        const vehicle = document.getElementById('vehicleType').value;
-
-        if (!name || name.length < 2) {
-          showFieldError('name', 'Please enter your full name (minimum 2 characters).');
-          isValid = false;
-        }
-
-        const phoneDigits = phone.replace(/\D/g, '');
-        if (!phone) {
-          showFieldError('phone', 'A valid phone or WhatsApp number is required.');
-          isValid = false;
-        } else if (phoneDigits.length < 7 || phoneDigits.length > 15) {
-          showFieldError('phone', 'Phone number must contain between 7 and 15 digits.');
-          isValid = false;
-        }
-
-        if (!vehicle) {
-          showFieldError('vehicleType', 'Please select a vehicle category.');
-          isValid = false;
-        }
-
-        return isValid;
+        // Server side validation gate in n8n evaluates all rules live
+        return true;
       }
 
       form.addEventListener('submit', async (e) => {
