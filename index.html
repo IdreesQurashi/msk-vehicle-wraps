@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MSK Signs & Atelier | Commercial Vehicle & Fleet Branding | Houston, TX</title>
-  <meta name="description" content="Houston's premier commercial fleet wrap atelier. 3M™ certified full fleet branding, work vans, trucks, and bespoke vehicle wraps. Get your itemized proposal and 3D render in under 24 hours.">
+  <title>MSK Signs & Atelier | Commercial Fleet & Vehicle Branding | Houston, TX</title>
+  <meta name="description" content="Houston's premier commercial fleet wrap atelier. 3M certified full fleet branding, work vans, trucks, and bespoke vehicle wraps. Get your itemized proposal and 3D render in under 24 hours.">
   <meta property="og:title" content="MSK Signs & Atelier | Commercial Vehicle & Fleet Wraps">
-  <meta property="og:description" content="Engineered for visibility. Crafted for lasting enterprise value. 3M™ certified, 5-year guarantee.">
+  <meta property="og:description" content="Engineering visibility. Creating enduring commercial value. 3M certified, 5 year guarantee.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&h=630&q=80">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,25 +15,25 @@
   
   <style>
     :root {
-      --bg-primary: #0A0D14;
-      --bg-secondary: #0F131C;
-      --bg-surface: #141A26;
-      --bg-input: #080A10;
+      /* Figma Curated Institutional Luxury Palette: Deep Prussian Navy & Warm Champagne Gold */
+      --bg-deep: #071822;
+      --bg-surface: #0C2434;
+      --bg-surface-elevated: #102E42;
+      --bg-input: #05121B;
       
-      /* KKR-Inspired Refined Palette: Muted Warm Gold, Platinum & Deep Navy */
-      --gold-primary: #C2A26F;
-      --gold-light: #DFCA9F;
+      --gold-primary: #C5A880;
+      --gold-light: #E2C799;
       --gold-dark: #A88656;
-      --gold-subtle: rgba(194, 162, 111, 0.15);
-      --gold-border: rgba(194, 162, 111, 0.35);
+      --gold-subtle: rgba(197, 168, 128, 0.12);
+      --gold-border: rgba(197, 168, 128, 0.35);
       
-      --text-main: #F8FAFC;
-      --text-silver: #CBD5E1;
+      --text-white: #FFFFFF;
+      --text-silver: #E2E8F0;
       --text-muted: #94A3B8;
       --text-dim: #64748B;
       
-      --hairline: rgba(255, 255, 255, 0.08);
-      --hairline-strong: rgba(255, 255, 255, 0.16);
+      --border-thin: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.14);
       
       --radius-sm: 4px;
       --radius-md: 8px;
@@ -47,8 +47,12 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background-color: var(--bg-primary);
+      background-color: var(--bg-deep);
       color: var(--text-silver);
       line-height: 1.7;
       overflow-x: hidden;
@@ -56,20 +60,20 @@
     }
 
     .container {
-      max-width: 1280px;
+      max-width: 1260px;
       margin: 0 auto;
       padding: 0 32px;
     }
 
-    /* Minimalist Editorial Header */
+    /* KKR Style Minimalist Corporate Header */
     .header {
-      background: rgba(10, 13, 20, 0.92);
+      background: rgba(7, 24, 34, 0.95);
       backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--border-thin);
       position: sticky;
       top: 0;
       z-index: 1000;
-      padding: 24px 0;
+      padding: 22px 0;
     }
     .header-inner {
       display: flex;
@@ -81,15 +85,14 @@
       align-items: baseline;
       gap: 12px;
       text-decoration: none;
-      color: var(--text-main);
     }
     .brand-title {
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
-      font-size: 1.15rem;
+      font-size: 1.25rem;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--text-main);
+      color: var(--text-white);
     }
     .brand-sub {
       font-size: 0.72rem;
@@ -98,46 +101,59 @@
       color: var(--gold-primary);
       font-weight: 600;
     }
-    .header-info {
+    .nav-links {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 32px;
+      list-style: none;
     }
-    .header-loc {
-      font-size: 0.8rem;
+    .nav-link {
       color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
       letter-spacing: 0.5px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      transition: color 0.2s ease;
     }
-    .loc-bullet {
-      width: 5px;
-      height: 5px;
+    .nav-link:hover {
+      color: var(--text-white);
+    }
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 22px;
+      background: transparent;
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      transition: all 0.25s ease;
+    }
+    .header-cta:hover {
       background: var(--gold-primary);
-      border-radius: 50%;
+      color: var(--bg-deep);
     }
 
-    /* Hero Section: Editorial Split */
+    /* KKR Style Master Hero Section (Full Width Editorial) */
     .hero {
-      padding: 80px 0 100px;
-      border-bottom: 1px solid var(--hairline);
+      padding: 110px 0 90px;
+      position: relative;
+      border-bottom: 1px solid var(--border-thin);
       background: 
-        radial-gradient(circle at 10% 20%, rgba(194, 162, 111, 0.06) 0%, transparent 50%),
-        radial-gradient(circle at 90% 80%, rgba(15, 23, 42, 0.7) 0%, transparent 60%);
+        radial-gradient(circle at 15% 20%, rgba(197, 168, 128, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 85% 75%, rgba(12, 36, 52, 0.9) 0%, transparent 60%);
     }
-    .hero-split {
-      display: grid;
-      grid-template-columns: 1.15fr 0.95fr;
-      gap: 64px;
-      align-items: center;
+    .hero-content {
+      max-width: 920px;
     }
-
-    /* Hero Left */
     .hero-category {
-      font-size: 0.76rem;
+      font-size: 0.8rem;
       font-weight: 700;
-      letter-spacing: 2.5px;
+      letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--gold-primary);
       margin-bottom: 24px;
@@ -145,1060 +161,1439 @@
     }
     .hero h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 4rem;
-      line-height: 1.05;
+      font-size: 4.4rem;
+      line-height: 1.06;
       font-weight: 600;
       letter-spacing: -0.5px;
-      color: var(--text-main);
-      margin-bottom: 28px;
+      color: var(--text-white);
+      margin-bottom: 30px;
     }
     .hero h1 em {
       font-style: italic;
       color: var(--gold-light);
     }
     .hero-summary {
-      font-size: 1.12rem;
+      font-size: 1.25rem;
       color: var(--text-muted);
       line-height: 1.75;
       margin-bottom: 48px;
-      max-width: 600px;
+      max-width: 780px;
       font-weight: 300;
     }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 36px;
+      background: var(--gold-primary);
+      color: var(--bg-deep);
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--gold-primary);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(197, 168, 128, 0.3);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: gap 0.2s ease;
+    }
+    .btn-secondary:hover {
+      gap: 16px;
+      color: var(--text-white);
+    }
 
-    /* KKR-Style Data Matrix */
+    /* KKR Signature Metric Matrix Bar */
+    .metric-ribbon {
+      background: rgba(12, 36, 52, 0.45);
+      border-bottom: 1px solid var(--border-thin);
+      padding: 40px 0;
+    }
     .data-matrix {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--hairline);
-      padding-top: 36px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
     }
     .data-item {
-      padding-right: 20px;
-      border-right: 1px solid var(--hairline);
+      padding-right: 24px;
+      border-right: 1px solid var(--border-thin);
     }
     .data-item:last-child {
       border-right: none;
       padding-right: 0;
-      padding-left: 20px;
-    }
-    .data-item:nth-child(2) {
-      padding-left: 20px;
     }
     .data-num {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.7rem;
+      font-size: 2.2rem;
       font-weight: 700;
-      color: var(--text-main);
+      color: var(--text-white);
       letter-spacing: -0.5px;
+      line-height: 1.1;
     }
     .data-desc {
-      font-size: 0.8rem;
-      color: var(--text-dim);
-      margin-top: 6px;
-      line-height: 1.4;
-    }
-
-    /* Hero Right: Architectural Quote Card */
-    .quote-box {
-      background: var(--bg-secondary);
-      border: 1px solid var(--hairline-strong);
-      border-radius: var(--radius-lg);
-      padding: 40px 36px;
-      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
-    }
-    .quote-box-header {
-      margin-bottom: 24px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--hairline);
-    }
-    .quote-box-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold-primary);
-      margin-bottom: 6px;
-    }
-    .quote-box-header h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.55rem;
-      font-weight: 700;
-      color: var(--text-main);
-      letter-spacing: -0.5px;
-    }
-    .quote-box-header p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
-
-    /* Segmented Vehicle Selector */
-    .selector-title {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--text-silver);
-      margin-bottom: 10px;
-      display: block;
-      letter-spacing: 0.5px;
-    }
-    .selector-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-      margin-bottom: 22px;
-    }
-    .v-chip {
-      background: var(--bg-input);
-      border: 1px solid var(--hairline);
-      border-radius: var(--radius-sm);
-      padding: 10px 8px;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.2s ease;
       font-size: 0.82rem;
-      font-weight: 500;
       color: var(--text-muted);
-      user-select: none;
-    }
-    .v-chip:hover {
-      border-color: rgba(255, 255, 255, 0.2);
-      color: var(--text-main);
-    }
-    .v-chip.active {
-      border-color: var(--gold-primary);
-      background: var(--gold-subtle);
-      color: var(--gold-light);
-      font-weight: 600;
-    }
-
-    /* Form Fields */
-    .form-group {
-      margin-bottom: 16px;
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-    label {
-      display: block;
-      font-size: 0.78rem;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: var(--text-muted);
-      letter-spacing: 0.3px;
-    }
-    label span {
-      color: var(--gold-primary);
-    }
-    input[type="text"],
-    input[type="tel"],
-    textarea {
-      width: 100%;
-      padding: 12px 14px;
-      background: var(--bg-input);
-      border: 1px solid var(--hairline);
-      border-radius: var(--radius-sm);
-      color: var(--text-main);
-      font-size: 0.9rem;
-      transition: all 0.2s ease;
-      outline: none;
-    }
-    input[type="text"]:focus,
-    input[type="tel"]:focus,
-    textarea:focus {
-      border-color: var(--gold-primary);
-      box-shadow: 0 0 0 2px var(--gold-subtle);
-      background: #0C0F17;
-    }
-    .input-error {
-      border-color: #F43F5E !important;
-      background: rgba(244, 63, 94, 0.05) !important;
-    }
-    .err-text {
-      color: #F43F5E;
-      font-size: 0.76rem;
-      margin-top: 4px;
-      display: none;
-      font-weight: 500;
-    }
-
-    .hp-field {
-      display: none !important;
-    }
-
-    .btn-submit {
-      width: 100%;
-      padding: 15px;
-      background: var(--gold-primary);
-      color: #080A10; /* WCAG AA Contrast compliant */
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.5px;
-      border: none;
-      border-radius: var(--radius-sm);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      transition: all 0.2s ease;
       margin-top: 8px;
-    }
-    .btn-submit:hover {
-      background: var(--gold-light);
-      transform: translateY(-1px);
-    }
-    .btn-submit:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .card-footer-note {
-      text-align: center;
-      font-size: 0.74rem;
-      color: var(--text-dim);
-      margin-top: 14px;
-      letter-spacing: 0.3px;
-    }
-
-    /* Success & Network Views */
-    .success-view {
-      display: none;
-      text-align: center;
-      padding: 36px 12px;
-    }
-    .success-view h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.55rem;
-      color: var(--text-main);
-      margin-bottom: 8px;
-    }
-    .success-view p {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-    }
-    .ref-code {
-      display: inline-block;
-      background: var(--bg-input);
-      border: 1px solid var(--hairline);
-      padding: 6px 14px;
-      border-radius: var(--radius-sm);
-      font-family: monospace;
-      font-size: 0.8rem;
-      color: var(--gold-primary);
-      margin-bottom: 24px;
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--gold-primary);
-      border: 1px solid var(--gold-border);
-      padding: 10px 22px;
-      border-radius: var(--radius-sm);
-      font-size: 0.84rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .btn-outline:hover {
-      background: var(--gold-subtle);
-    }
-    .network-alert {
-      display: none;
-      background: rgba(244, 63, 94, 0.08);
-      border: 1px solid rgba(244, 63, 94, 0.25);
-      padding: 14px;
-      border-radius: var(--radius-sm);
-      margin-bottom: 16px;
-      color: #FDA4AF;
-      font-size: 0.85rem;
-    }
-
-    /* Institutional Standards Bar */
-    .standards-bar {
-      border-bottom: 1px solid var(--hairline);
-      padding: 24px 0;
-      background: #080A10;
-    }
-    .standards-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
-    .standards-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 2px;
+      line-height: 1.45;
       text-transform: uppercase;
-      color: var(--text-dim);
-    }
-    .standards-list {
-      display: flex;
-      gap: 36px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .standard-item {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 600;
       letter-spacing: 1px;
-      color: var(--text-muted);
     }
 
-    /* Editorial Section Titles */
-    .section-head {
-      margin: 100px 0 54px;
-    }
+    /* Section Typography */
     .section-eyebrow {
-      font-size: 0.74rem;
+      font-size: 0.76rem;
       font-weight: 700;
       letter-spacing: 2.5px;
       text-transform: uppercase;
       color: var(--gold-primary);
-      margin-bottom: 12px;
+      margin-bottom: 16px;
       display: block;
     }
     .section-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 3.2rem;
+      font-size: 2.85rem;
       font-weight: 600;
-      line-height: 1.15;
-      color: var(--text-main);
+      color: var(--text-white);
       letter-spacing: -0.5px;
+      line-height: 1.15;
     }
-    .section-desc {
+    .section-subtitle {
       font-size: 1.05rem;
       color: var(--text-muted);
       margin-top: 14px;
-      max-width: 640px;
+      max-width: 650px;
       font-weight: 300;
     }
 
-    /* KKR-Style 3 Strategic Pillars (Divided Columns) */
-    .pillars-container {
+    /* KKR Style Institutional Overview (2-Column Asymmetric) */
+    .overview-section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border-thin);
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 70px;
+      align-items: flex-start;
+    }
+    .overview-callout {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.9rem;
+      line-height: 1.18;
+      color: var(--text-white);
+      font-weight: 500;
+    }
+    .overview-callout em {
+      color: var(--gold-light);
+      font-style: italic;
+    }
+    .overview-text {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.85;
+      font-weight: 300;
+    }
+    .overview-text p {
+      margin-bottom: 22px;
+    }
+    .overview-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* KKR Style Three Strategic Pillars */
+    .pillars-section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border-thin);
+    }
+    .pillars-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--hairline);
-      border-bottom: 1px solid var(--hairline);
+      gap: 28px;
+      margin-top: 60px;
     }
-    .pillar-col {
-      padding: 48px 36px;
-      border-right: 1px solid var(--hairline);
-      transition: background 0.3s ease;
+    .pillar-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-thin);
+      padding: 44px 36px;
+      border-radius: var(--radius-md);
+      transition: all 0.3s ease;
+      position: relative;
     }
-    .pillar-col:last-child {
-      border-right: none;
-    }
-    .pillar-col:hover {
-      background: rgba(255, 255, 255, 0.02);
+    .pillar-card:hover {
+      border-color: var(--gold-border);
+      background: var(--bg-surface-elevated);
+      transform: translateY(-4px);
     }
     .pillar-index {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 700;
       color: var(--gold-primary);
-      margin-bottom: 28px;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+      display: block;
     }
-    .pillar-col h3 {
+    .pillar-card h3 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 14px;
-      letter-spacing: -0.3px;
+      font-weight: 600;
+      color: var(--text-white);
+      margin-bottom: 16px;
+      line-height: 1.3;
     }
-    .pillar-col p {
+    .pillar-card p {
+      font-size: 0.92rem;
       color: var(--text-muted);
-      font-size: 0.95rem;
       line-height: 1.7;
     }
 
-    /* Curated Portfolio / Case Studies */
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+    /* Curated Commercial Projects (KKR Style Shared Success Stories) */
+    .projects-section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border-thin);
     }
-    .portfolio-card {
-      background: var(--bg-secondary);
-      border: 1px solid var(--hairline);
+    .projects-header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 50px;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    .project-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-thin);
       border-radius: var(--radius-md);
       overflow: hidden;
       transition: all 0.3s ease;
     }
-    .portfolio-card:hover {
-      border-color: var(--hairline-strong);
-      transform: translateY(-3px);
+    .project-card:hover {
+      border-color: var(--gold-border);
+      transform: translateY(-4px);
     }
-    .portfolio-img {
-      height: 240px;
-      width: 100%;
+    .project-media {
+      position: relative;
+      height: 320px;
       overflow: hidden;
-      background: #000;
     }
-    .portfolio-img img {
+    .project-media img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.6s ease;
     }
-    .portfolio-card:hover .portfolio-img img {
-      transform: scale(1.05);
+    .project-card:hover .project-media img {
+      transform: scale(1.04);
     }
-    .portfolio-content {
-      padding: 24px;
-    }
-    .portfolio-tag {
+    .project-tag {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(7, 24, 34, 0.88);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border-thin);
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--gold-primary);
-      margin-bottom: 8px;
+      color: var(--gold-light);
     }
-    .portfolio-title {
+    .project-body {
+      padding: 32px;
+    }
+    .project-title {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text-main);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--text-white);
       margin-bottom: 8px;
     }
-    .portfolio-detail {
-      font-size: 0.85rem;
+    .project-spec {
+      font-size: 0.88rem;
+      color: var(--gold-primary);
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+    .project-desc {
+      font-size: 0.92rem;
       color: var(--text-muted);
-      line-height: 1.6;
+      line-height: 1.65;
+    }
+    .attribution-note {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-thin);
+      font-size: 0.76rem;
+      color: var(--text-dim);
+      text-align: center;
+    }
+    .attribution-note a {
+      color: var(--text-muted);
+      text-decoration: none;
     }
 
-    /* 3-Stage Process */
-    .process-timeline {
+    /* Executive Proposal Desk (The Quote Form Section) */
+    .proposal-section {
+      padding: 110px 0;
+      border-bottom: 1px solid var(--border-thin);
+      background: 
+        radial-gradient(circle at 85% 20%, rgba(197, 168, 128, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 15% 85%, rgba(12, 36, 52, 0.7) 0%, transparent 55%);
+    }
+    .proposal-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--hairline);
-      border-bottom: 1px solid var(--hairline);
+      grid-template-columns: 1fr 1.15fr;
+      gap: 64px;
+      align-items: flex-start;
     }
-    .process-item {
-      padding: 44px 36px;
-      border-right: 1px solid var(--hairline);
+    .desk-advisory {
+      padding-right: 20px;
     }
-    .process-item:last-child {
-      border-right: none;
+    .desk-advisory h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.2rem;
+      font-weight: 600;
+      color: var(--text-white);
+      line-height: 1.15;
+      margin-bottom: 22px;
     }
-    .process-stage {
+    .desk-advisory p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 36px;
+      font-weight: 300;
+    }
+    .desk-commitments {
+      border-top: 1px solid var(--border-thin);
+      padding-top: 32px;
+    }
+    .commitment-row {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+    .commitment-row:last-child {
+      margin-bottom: 0;
+    }
+    .commitment-icon {
+      width: 24px;
+      height: 24px;
+      color: var(--gold-primary);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .commitment-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-white);
+      margin-bottom: 4px;
+    }
+    .commitment-desc {
+      font-size: 0.84rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+
+    /* The Proposal Form Card */
+    .form-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 44px 40px;
+      box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.7);
+    }
+    .form-header {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-thin);
+    }
+    .form-header-title {
       font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--text-white);
+    }
+    .form-header-sub {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+    .form-grid-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .form-group {
+      margin-bottom: 18px;
+    }
+    .form-label {
+      display: block;
       font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--text-silver);
+      margin-bottom: 8px;
+    }
+    .form-label span {
+      color: var(--gold-primary);
+    }
+    .form-control {
+      width: 100%;
+      background: var(--bg-input);
+      border: 1px solid var(--border-medium);
+      color: var(--text-white);
+      padding: 13px 16px;
+      font-size: 0.92rem;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+      outline: none;
+    }
+    .form-control:focus {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 0 3px var(--gold-subtle);
+      background: #061722;
+    }
+    .form-control.is-invalid {
+      border-color: #EF4444;
+      background: rgba(239, 68, 68, 0.05);
+    }
+    .field-error {
+      color: #EF4444;
+      font-size: 0.78rem;
+      margin-top: 6px;
+      display: none;
+      font-weight: 500;
+    }
+    .field-error.show {
+      display: block;
+    }
+    textarea.form-control {
+      resize: vertical;
+      min-height: 90px;
+    }
+    .consent-text {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+      margin: 20px 0 24px;
+    }
+    .btn-submit {
+      width: 100%;
+      padding: 16px 24px;
+      background: var(--gold-primary);
+      color: var(--bg-deep);
+      font-size: 0.94rem;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--gold-primary);
-      margin-bottom: 20px;
+      border: 1px solid var(--gold-primary);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
     }
-    .process-item h3 {
+    .btn-submit:hover:not(:disabled) {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      box-shadow: 0 10px 25px -5px rgba(197, 168, 128, 0.3);
+    }
+    .btn-submit:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
+    /* Submission Feedback Boxes */
+    .success-box {
+      display: none;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: var(--radius-md);
+      padding: 36px 30px;
+      text-align: center;
+    }
+    .success-box.show {
+      display: block;
+    }
+    .success-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 16px;
+      color: #10B981;
+    }
+    .success-box h3 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 12px;
+      font-size: 1.35rem;
+      color: var(--text-white);
+      margin-bottom: 8px;
     }
-    .process-item p {
-      font-size: 0.9rem;
+    .success-box p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .btn-reset {
+      background: transparent;
+      border: 1px solid var(--border-medium);
+      color: var(--text-silver);
+      padding: 10px 20px;
+      font-size: 0.82rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .btn-reset:hover {
+      border-color: var(--gold-primary);
+      color: var(--gold-primary);
+    }
+    .form-global-error {
+      display: none;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: #F87171;
+      font-size: 0.84rem;
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .form-global-error.show {
+      display: block;
+    }
+
+    /* Execution Process (KKR 4-Step Timeline) */
+    .process-section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border-thin);
+    }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      margin-top: 60px;
+    }
+    .process-step {
+      border-top: 2px solid var(--border-thin);
+      padding-top: 28px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .process-step:hover {
+      border-top-color: var(--gold-primary);
+    }
+    .step-index {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      display: block;
+    }
+    .process-step h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-white);
+      margin-bottom: 12px;
+      line-height: 1.35;
+    }
+    .process-step p {
+      font-size: 0.88rem;
       color: var(--text-muted);
       line-height: 1.65;
     }
 
-    /* FAQ Section */
-    .faq-wrapper {
-      border-top: 1px solid var(--hairline);
-      margin-bottom: 100px;
+    /* FAQ Section (KKR Institutional Q&A) */
+    .faq-section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border-thin);
     }
-    .faq-row {
+    .faq-grid {
       display: grid;
-      grid-template-columns: 1fr 1.5fr;
-      padding: 36px 0;
-      border-bottom: 1px solid var(--hairline);
-      gap: 32px;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 60px;
     }
-    .faq-q {
+    .faq-item {
+      border-bottom: 1px solid var(--border-thin);
+      padding-bottom: 28px;
+    }
+    .faq-question {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text-main);
+      font-weight: 600;
+      color: var(--text-white);
+      margin-bottom: 12px;
       line-height: 1.4;
     }
-    .faq-a {
-      font-size: 0.94rem;
+    .faq-answer {
+      font-size: 0.92rem;
       color: var(--text-muted);
       line-height: 1.7;
     }
 
-    /* Discreet WhatsApp Concierge */
-    .wa-concierge {
-      position: fixed;
-      bottom: 32px;
-      right: 32px;
-      background: var(--bg-surface);
-      border: 1px solid var(--hairline-strong);
-      color: var(--text-silver);
-      border-radius: 999px;
-      padding: 12px 22px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.3px;
-      text-decoration: none;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-      z-index: 9999;
-      transition: all 0.2s ease;
+    /* KKR Multi-Column Institutional Footer */
+    .footer {
+      background: #040E15;
+      padding: 80px 0 40px;
+      border-top: 1px solid var(--border-thin);
     }
-    .wa-concierge:hover {
-      border-color: var(--gold-border);
-      color: var(--text-main);
-      transform: translateY(-2px);
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 48px;
+      margin-bottom: 60px;
     }
-    .wa-dot {
-      width: 8px;
-      height: 8px;
-      background: #10B981;
-      border-radius: 50%;
-    }
-
-    /* Executive Footer */
-    footer {
-      background: #06080E;
-      border-top: 1px solid var(--hairline);
-      padding: 60px 0 40px;
+    .footer-col h4 {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 0.82rem;
-      color: var(--text-dim);
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-white);
+      margin-bottom: 22px;
     }
-    .footer-inner {
+    .footer-col p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .footer-links {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s ease;
+    }
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+    .footer-bottom {
+      border-top: 1px solid var(--border-thin);
+      padding-top: 32px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
+      font-size: 0.8rem;
+      color: var(--text-dim);
     }
 
-    @media (max-width: 980px) {
-      .hero-split { grid-template-columns: 1fr; gap: 40px; }
-      .hero h1 { font-size: 3rem; }
-      .data-matrix, .pillars-container, .portfolio-grid, .process-timeline { grid-template-columns: 1fr; }
-      .data-item, .pillar-col, .process-item { border-right: none; border-bottom: 1px solid var(--hairline); padding: 28px 0; }
-      .faq-row { grid-template-columns: 1fr; gap: 12px; }
-      .quote-box { padding: 32px 20px; }
+    /* Discreet Sticky WhatsApp Concierge Badge */
+    .whatsapp-badge {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--gold-border);
+      padding: 12px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--text-white);
+      box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.7);
+      transition: all 0.25s ease;
+    }
+    .whatsapp-badge:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 20px 40px -5px rgba(197, 168, 128, 0.25);
+    }
+    .whatsapp-icon-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      flex-shrink: 0;
+    }
+    .whatsapp-text {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .whatsapp-text span {
+      display: block;
+      font-size: 0.68rem;
+      color: var(--gold-primary);
+      font-weight: 500;
+    }
+
+    /* Honeypot field (hidden from legitimate visitors) */
+    .hp-trap {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 0;
+      width: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Responsive Breakdown */
+    @media (max-width: 1024px) {
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+      .overview-grid, .proposal-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .data-matrix {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+      .data-item {
+        border-right: none;
+        padding-right: 0;
+      }
+      .pillars-grid, .process-grid {
+        grid-template-columns: 1fr;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 20px;
+      }
+      .nav-links, .header-cta {
+        display: none;
+      }
+      .hero {
+        padding: 70px 0 60px;
+      }
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      .hero-summary {
+        font-size: 1.05rem;
+      }
+      .form-grid-row {
+        grid-template-columns: 1fr;
+      }
+      .form-card {
+        padding: 30px 20px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Minimalist Header -->
+  <!-- KKR Style Minimalist Header -->
   <header class="header">
     <div class="container header-inner">
       <a href="#" class="brand">
-        <span class="brand-title">MSK</span>
-        <span class="brand-sub">Commercial Atelier</span>
+        <span class="brand-title">MSK Signs & Atelier</span>
+        <span class="brand-sub">Commercial Fleet</span>
       </a>
-      <div class="header-info">
-        <div class="header-loc">
-          <span class="loc-bullet"></span>
-          Houston Studio • 6121 Hillcroft Ave
-        </div>
-      </div>
+      <ul class="nav-links">
+        <li><a href="#overview" class="nav-link">Overview</a></li>
+        <li><a href="#pillars" class="nav-link">Strategic Pillars</a></li>
+        <li><a href="#projects" class="nav-link">Fleet Showcase</a></li>
+        <li><a href="#process" class="nav-link">Execution Process</a></li>
+        <li><a href="#faq" class="nav-link">Inquiries</a></li>
+      </ul>
+      <a href="#quote-desk" class="header-cta">Request Proposal</a>
     </div>
   </header>
 
-  <!-- Hero Section: Editorial Split -->
+  <!-- KKR Style Full Width Master Hero Section -->
   <section class="hero">
     <div class="container">
-      <div class="hero-split">
-        
-        <!-- Left: Institutional Value Proposition -->
-        <div class="hero-left">
-          <span class="hero-category">Commercial Fleet & Vehicle Branding</span>
-          
-          <h1>Engineered for Visibility. Crafted for <em>Enterprise Value.</em></h1>
-          
-          <p class="hero-desc">
-            Houston's dedicated commercial vehicle wrap studio. Transforming corporate fleets, service vans, and commercial vehicles with 3M™ and XPEL™ certified precision.
+      <div class="hero-content">
+        <span class="hero-category">Commercial Fleet Branding & Surface Preservation</span>
+        <h1>Engineering Commercial Visibility. <em>Creating Enduring Enterprise Value.</em></h1>
+        <p class="hero-summary">
+          Houston's premier commercial vehicle atelier. Transforming cargo vans, heavy duty trucks, and enterprise service fleets into high yield mobile billboards backed by a 5 year 3M certified guarantee.
+        </p>
+        <div class="hero-actions">
+          <a href="#quote-desk" class="btn-primary">Request Itemized Proposal</a>
+          <a href="https://wa.me/15551234567?text=Hi%2C%20I%20would%20like%20a%20commercial%20vehicle%20wrap%20proposal." target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            Direct WhatsApp Consultation &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KKR Signature Metric Matrix Bar -->
+  <section class="metric-ribbon">
+    <div class="container">
+      <div class="data-matrix">
+        <div class="data-item">
+          <div class="data-num">500+</div>
+          <div class="data-desc">Commercial Vehicles Wrapped</div>
+        </div>
+        <div class="data-item">
+          <div class="data-num">5 Year</div>
+          <div class="data-desc">3M Certified Surface Guarantee</div>
+        </div>
+        <div class="data-item">
+          <div class="data-num">&lt;24h</div>
+          <div class="data-desc">Guaranteed Proposal Turnaround</div>
+        </div>
+        <div class="data-item">
+          <div class="data-num">100%</div>
+          <div class="data-desc">In House Cleanroom Application</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KKR Style Institutional Overview -->
+  <section id="overview" class="overview-section">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-callout">
+          Your commercial fleet is your highest yielding marketing asset. <em>Make every single mile count.</em>
+        </div>
+        <div class="overview-text">
+          <p>
+            Traditional outdoor billboards demand recurring monthly capital while remaining fixed to a single physical corridor. Commercial vehicle branding converts standard operational travel into an active, mobile marketing campaign generating between 30,000 and 70,000 visual impressions daily across the Greater Houston metropolitan region.
+          </p>
+          <p>
+            Beyond market visibility, premium cast vinyl acts as a protective shield over factory paintwork, preserving commercial asset value and insulating against stone chips, highway grit, and intense solar weathering.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KKR Style Three Strategic Pillars -->
+  <section id="pillars" class="pillars-section">
+    <div class="container">
+      <span class="section-eyebrow">Enterprise Value Creation</span>
+      <h2 class="section-title">The Three Strategic Pillars of Fleet Transformation</h2>
+      <p class="section-subtitle">
+        Every project at MSK Signs & Atelier is executed under strict industrial standards to ensure peak aesthetic impact and long term durability.
+      </p>
+
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <span class="pillar-index">01 / BRAND VISIBILITY</span>
+          <h3>70,000+ Daily Impressions</h3>
+          <p>
+            Your vehicles establish an authoritative presence across corporate corridors, residential developments, and interstate transit corridors without recurring media costs.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-index">02 / ASSET DEFENSE</span>
+          <h3>OEM Paint Armor & Value</h3>
+          <p>
+            Cast vinyl provides an 8 mil protective barrier shielding original automotive paint against chemical exposure, UV degradation, and highway stone chips, ensuring high resale equity.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-index">03 / PRECISION CRAFT</span>
+          <h3>Certified Cleanroom Application</h3>
+          <p>
+            Applied in our humidity and climate controlled Houston facility by 3M certified master technicians to guarantee bubble free adhesion with zero panel lifting.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Commercial Projects (KKR Style Shared Success Stories) -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="projects-header-flex">
+        <div>
+          <span class="section-eyebrow">Portfolio of Excellence</span>
+          <h2 class="section-title">Selected Commercial & Fleet Deployments</h2>
+        </div>
+        <a href="#quote-desk" class="btn-secondary">Request Similar Spec &rarr;</a>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-media">
+            <span class="project-tag">Full Fleet Wrap</span>
+            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="Commercial Fleet Van with Satin Deep Black wrap">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Commercial Service Cargo Van</h3>
+            <div class="project-spec">3M 2080 Series | Satin Deep Black with Reflective Accents</div>
+            <p class="project-desc">
+              Complete surface transformation for an enterprise electrical contractor. Designed for maximum night visibility and highway presence.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-media">
+            <span class="project-tag">Heavy Duty Utility</span>
+            <img src="https://images.unsplash.com/photo-1551830820-330a71b99659?auto=format&fit=crop&w=800&q=80" alt="Heavy duty pickup truck wrapped with custom corporate branding">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Enterprise Utility Fleet Truck</h3>
+            <div class="project-spec">Avery Dennison MPI 1105 | Cast Gloss with UV Overlaminate</div>
+            <p class="project-desc">
+              Robust branding for commercial plumbing and HVAC operations. Engineered to endure job site grit and high pressure wash cycles.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-media">
+            <span class="project-tag">Executive Transport</span>
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Executive Sprinter Shuttle with brushed metallic finish">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Executive Passenger Sprinter</h3>
+            <div class="project-spec">3M Architectural Series | Brushed Titanium & Ceramic Coating</div>
+            <p class="project-desc">
+              Subtle corporate transport branding combining understated elegance with high durability architectural film.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-media">
+            <span class="project-tag">Partial Fleet Graphic</span>
+            <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="Commercial delivery fleet vehicle with precision die cut branding">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Logistics & Delivery Fleet</h3>
+            <div class="project-spec">Cast Vinyl Lettering & High Contrast Quarter Panel Graphics</div>
+            <p class="project-desc">
+              Cost conscious commercial fleet coverage optimizing brand recall while minimizing installation downtime to under 12 hours per vehicle.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="attribution-note">
+        Photography assets provided by Unsplash photographers: Campbell Boulanger, Austin Ramsey, Devon Janse van Rensburg, and Lance Asper.
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive Proposal Desk (The Quote Form Section) -->
+  <section id="quote-desk" class="proposal-section">
+    <div class="container">
+      <div class="proposal-grid">
+        <div class="desk-advisory">
+          <span class="section-eyebrow">Direct Commercial Consultation</span>
+          <h2>Commercial Proposal Desk</h2>
+          <p>
+            Connect directly with our senior fleet estimators. Receive an itemized technical quotation, material specifications, and a digital 3D visualization within 24 business hours.
           </p>
 
-          <div class="data-matrix">
-            <div class="data-item">
-              <div class="data-num">70,000+</div>
-              <div class="data-desc">Daily Highway Visual Impressions</div>
+          <div class="desk-commitments">
+            <div class="commitment-row">
+              <svg class="commitment-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <div>
+                <div class="commitment-title">&lt;24 Hour Turnaround Guarantee</div>
+                <div class="commitment-desc">Detailed digital proposal delivered directly to your inbox and WhatsApp.</div>
+              </div>
             </div>
-            <div class="data-item">
-              <div class="data-num">3M™ & XPEL™</div>
-              <div class="data-desc">Certified Materials & Cleanroom Facility</div>
+
+            <div class="commitment-row">
+              <svg class="commitment-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+              <div>
+                <div class="commitment-title">Certified 3M & Avery Dennison Materials</div>
+                <div class="commitment-desc">Industrial cast films guaranteed against peeling, bubbling, and UV fading.</div>
+              </div>
             </div>
-            <div class="data-item">
-              <div class="data-num">5-Year</div>
-              <div class="data-desc">No-Peel Factory Resale Guarantee</div>
+
+            <div class="commitment-row">
+              <svg class="commitment-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+              </svg>
+              <div>
+                <div class="commitment-title">Dedicated Fleet Project Specialist</div>
+                <div class="commitment-desc">One direct point of contact overseeing prep, print, installation, and delivery.</div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Right: The Executive Quote Card -->
-        <div class="quote-box">
-          <div class="quote-box-header">
-            <div class="quote-box-eyebrow">Direct Quotation</div>
-            <h2>Request Commercial Proposal</h2>
-            <p>Receive an itemized specification and 3D proof within 24 hours.</p>
+        <div class="form-card">
+          <div class="form-header">
+            <h3 class="form-header-title">Request Commercial Proposal</h3>
+            <p class="form-header-sub">Provide your vehicle specifications for an itemized estimate.</p>
           </div>
 
-          <div class="network-alert" id="networkErrorBox">
-            ⚠️ <strong>Notice:</strong> Unable to connect to the quotation pipeline right now. Please <a href="https://wa.me/15551234567?text=Hi%2C%20I%20tried%20requesting%20a%20wrap%20quote" style="color: var(--gold-light); font-weight: 600;" target="_blank">click here to message us directly on WhatsApp</a>.
-          </div>
+          <div id="formGlobalError" class="form-global-error"></div>
 
-          <!-- Success State -->
-          <div class="success-view" id="successBox">
-            <h3>Proposal Request Logged</h3>
-            <p id="successMessage">Thank you. Our senior engineers will review your vehicle specifications and deliver a custom 3D proof within 24 hours.</p>
-            <div>
-              <span class="ref-code" id="displaySubId">Ref: SUB-XXXXXX</span>
-            </div>
-            <div>
-              <button type="button" class="btn-outline" id="btnResetForm">Submit Another Specification</button>
-            </div>
-          </div>
-
-          <!-- Form -->
           <form id="quoteForm" novalidate>
-            <input type="hidden" id="submissionId" name="submissionId" value="">
-            
-            <!-- Honeypot -->
-            <div class="hp-field">
-              <label for="website">Leave blank</label>
-              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
-            </div>
+            <!-- Honeypot trap for automated bots -->
+            <input type="text" name="website" id="website" class="hp-trap" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="submissionId" id="submissionId">
 
-            <!-- Vehicle Classification Selector -->
-            <span class="selector-title">Vehicle Classification <span>*</span></span>
-            <input type="hidden" id="vehicleType" name="vehicleType" value="Van">
-            
-            <div class="selector-grid">
-              <div class="v-chip active" data-value="Van">Cargo Van</div>
-              <div class="v-chip" data-value="Truck">Work Truck</div>
-              <div class="v-chip" data-value="Fleet (Multiple Vehicles)">Fleet (Multi)</div>
-              <div class="v-chip" data-value="Car">Sedan / Coupe</div>
-              <div class="v-chip" data-value="SUV">SUV</div>
-              <div class="v-chip" data-value="Other">Specialty</div>
-            </div>
-            <div class="err-text" id="vehicleTypeError">Please select a vehicle classification.</div>
-
-            <div class="form-row">
+            <div class="form-grid-row">
               <div class="form-group">
-                <label for="name">Full Name <span>*</span></label>
-                <input type="text" id="name" name="name" placeholder="Michael Smith" required autocomplete="name">
-                <div class="err-text" id="nameError">Please enter your name (at least 2 characters).</div>
+                <label for="fullName" class="form-label">Full Name <span>*</span></label>
+                <input type="text" id="fullName" name="name" class="form-control" placeholder="e.g. Marcus Vance" required>
+                <div id="nameError" class="field-error">Please enter your full name.</div>
               </div>
 
               <div class="form-group">
-                <label for="phone">Phone / WhatsApp <span>*</span></label>
-                <input type="tel" id="phone" name="phone" placeholder="(713) 555-0199" required autocomplete="tel">
-                <div class="err-text" id="phoneError">A valid phone number with at least 7 digits is required.</div>
+                <label for="businessName" class="form-label">Business Name</label>
+                <input type="text" id="businessName" name="business" class="form-control" placeholder="e.g. Vance Logistics LLC">
+                <div id="businessError" class="field-error"></div>
+              </div>
+            </div>
+
+            <div class="form-grid-row">
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone or WhatsApp <span>*</span></label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+1 (713) 555 0192" required>
+                <div id="phoneError" class="field-error">A valid phone number with at least 7 digits is required.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="vehicleType" class="form-label">Vehicle Type <span>*</span></label>
+                <select id="vehicleType" name="vehicleType" class="form-control" required>
+                  <option value="">Select vehicle category</option>
+                  <option value="Car">Sedan or Coupe</option>
+                  <option value="Van">Cargo Van (Sprinter, Transit, ProMaster)</option>
+                  <option value="Truck">Pickup Truck (F150, Silverado, Ram)</option>
+                  <option value="SUV">SUV or Crossover</option>
+                  <option value="Fleet (Multiple Vehicles)">Commercial Fleet (Multiple Units)</option>
+                  <option value="Other">Box Truck or Specialty Vehicle</option>
+                </select>
+                <div id="vehicleTypeError" class="field-error">Please select a valid vehicle category.</div>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="business">Company Name</label>
-              <input type="text" id="business" name="business" placeholder="Apex Mechanical Contracting" autocomplete="organization">
+              <label for="message" class="form-label">Project Scope & Details</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Describe vehicle count, partial or full wrap goals, or specific timeline requirements." maxlength="500"></textarea>
+              <div id="messageError" class="field-error"></div>
             </div>
 
-            <div class="form-group">
-              <label for="message">Project Scope & Fleet Details</label>
-              <textarea id="message" name="message" rows="2" placeholder="Full wrap, partial wrap, logo placement, number of vehicles..." maxlength="500"></textarea>
-            </div>
+            <p class="consent-text">
+              By submitting, you agree to be contacted regarding your vehicle wrap proposal. Your information is held securely, transmitted via encrypted webhook, and never sold to third parties.
+            </p>
 
-            <button type="submit" class="btn-submit" id="btnSubmit">
-              <span>Request Proposal & 3D Proof</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <button type="submit" id="submitBtn" class="btn-submit">
+              <span>Generate Proposal Request</span>
+              <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
             </button>
-
-            <div class="card-footer-note">
-              Strict Confidentiality • Direct Engineer Review • Houston Facility
-            </div>
           </form>
-        </div>
 
-      </div>
-    </div>
-  </section>
+          <div id="successBox" class="success-box">
+            <svg class="success-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <h3>Proposal Request Confirmed</h3>
+            <p id="successMessageText">
+              Thank you. Your project specifications have reached our Houston estimating desk. A senior wrap estimator will review your details and deliver an itemized quote within 24 hours.
+            </p>
+            <button type="button" id="resetFormBtn" class="btn-reset">Submit Another Vehicle</button>
+          </div>
 
-  <!-- Standards Bar -->
-  <section class="standards-bar">
-    <div class="container standards-inner">
-      <div class="standards-label">Accredited Materials & Technology</div>
-      <div class="standards-list">
-        <div class="standard-item">3M™ COMMERCIAL GRAPHICS</div>
-        <div class="standard-item">AVERY DENNISON™ SUPREME</div>
-        <div class="standard-item">XPEL™ PROTECTION</div>
-        <div class="standard-item">ORACAL® HIGH PERFORMANCE</div>
-        <div class="standard-item">CERAMIC PRO® COATINGS</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3 Strategic Pillars (KKR Architectural Divided Columns) -->
-  <section class="container">
-    <div class="section-head">
-      <span class="section-eyebrow">Strategic Advantage</span>
-      <h2 class="section-title">The Three Strategic Pillars of Commercial Wraps</h2>
-      <p class="section-desc">Why enterprise contractors and commercial fleets treat vehicle branding as their most cost-effective capital investment.</p>
-    </div>
-
-    <div class="pillars-container">
-      <div class="pillar-col">
-        <div class="pillar-index">01 / VISIBILITY AT SCALE</div>
-        <h3>70,000+ Daily Visual Impressions</h3>
-        <p>A single branded service vehicle generates up to 70,000 visual impressions daily across Houston highways, job sites, and client properties. Delivering the lowest cost-per-thousand (CPM) of any outdoor advertising medium.</p>
-      </div>
-
-      <div class="pillar-col">
-        <div class="pillar-index">02 / CAPITAL PRESERVATION</div>
-        <h3>OEM Paint Armor & Resale Value</h3>
-        <p>Premium 3M cast vinyl acts as a sacrificial barrier shielding original factory paint from stone chips, road debris, and harsh Texas UV exposure. Preserves factory resale value upon fleet decommissioning.</p>
-      </div>
-
-      <div class="pillar-col">
-        <div class="pillar-index">03 / ATELIER INSTALLATION</div>
-        <h3>Cleanroom Environmental Control</h3>
-        <p>Executed inside our climate-controlled Houston facility by certified master technicians. Every seam is tucked, post-heated, and inspected to ensure zero peeling, zero bubbling, and a flawless finish.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Curated Portfolio Exhibition -->
-  <section class="container">
-    <div class="section-head">
-      <span class="section-eyebrow">Selected Commissions</span>
-      <h2 class="section-title">Recent Fleet & Commercial Projects</h2>
-      <p class="section-desc">Selected full commercial fleet branding and specialty vehicle wraps completed in our Houston facility.</p>
-    </div>
-
-    <div class="portfolio-grid">
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="https://images.unsplash.com/photo-1559297434-fae8a1916a79?auto=format&fit=crop&w=800&q=80" alt="Commercial Fleet Van Wrap" loading="lazy">
-        </div>
-        <div class="portfolio-content">
-          <div class="portfolio-tag">Commercial Logistics</div>
-          <div class="portfolio-title">Mercedes Sprinter High-Roof</div>
-          <div class="portfolio-detail">Full commercial 3M cast vinyl wrap with UV-resistant over-laminate.</div>
-        </div>
-      </div>
-
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=800&q=80" alt="Heavy Duty Work Truck" loading="lazy">
-        </div>
-        <div class="portfolio-content">
-          <div class="portfolio-tag">Industrial Contracting</div>
-          <div class="portfolio-title">Ford F-250 Super Duty</div>
-          <div class="portfolio-detail">Partial cab and bed wrap paired with reflective fleet identification.</div>
-        </div>
-      </div>
-
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="Executive Satin Obsidian Wrap" loading="lazy">
-        </div>
-        <div class="portfolio-content">
-          <div class="portfolio-tag">Executive Vehicles</div>
-          <div class="portfolio-title">Satin Obsidian Finish</div>
-          <div class="portfolio-detail">Full exterior color transformation using Avery Dennison Supreme cast film.</div>
-        </div>
-      </div>
-
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="High Performance Vehicle" loading="lazy">
-        </div>
-        <div class="portfolio-content">
-          <div class="portfolio-tag">Specialty Series</div>
-          <div class="portfolio-title">High-Impact Performance Coupe</div>
-          <div class="portfolio-detail">Aesthetic accent wrap with ceramic protective coating overlay.</div>
-        </div>
-      </div>
-
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Commercial Delivery Fleet" loading="lazy">
-        </div>
-        <div class="portfolio-content">
-          <div class="portfolio-tag">Multi-Unit Fleet</div>
-          <div class="portfolio-title">Logistics & Service Fleet</div>
-          <div class="portfolio-detail">Standardized enterprise fleet branding across 12 commercial units.</div>
-        </div>
-      </div>
-
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=800&q=80" alt="Cleanroom Vinyl Installation" loading="lazy">
-        </div>
-        <div class="portfolio-content">
-          <div class="portfolio-tag">Atelier Facility</div>
-          <div class="portfolio-title">Precision Cleanroom Installation</div>
-          <div class="portfolio-detail">Edge-tucking and post-heat adhesion in climate-controlled conditions.</div>
+          <noscript>
+            <div style="margin-top: 20px; padding: 14px; background: rgba(197, 168, 128, 0.1); border: 1px solid var(--gold-primary); color: var(--gold-light); font-size: 0.85rem; border-radius: 4px;">
+              JavaScript is required for online proposal generation. Please contact our Houston atelier directly via WhatsApp at +1 (555) 123 4567.
+            </div>
+          </noscript>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3-Stage Methodology -->
-  <section class="container">
-    <div class="section-head">
-      <span class="section-eyebrow">Execution Methodology</span>
-      <h2 class="section-title">The Three-Stage Client Journey</h2>
-      <p class="section-desc">A structured, white-glove process tailored for fleet operators and enterprise contractors.</p>
-    </div>
+  <!-- Execution Process (KKR 4-Step Timeline) -->
+  <section id="process" class="process-section">
+    <div class="container">
+      <span class="section-eyebrow">Methodology & Rigor</span>
+      <h2 class="section-title">The Four Stage Execution Journey</h2>
+      <p class="section-subtitle">
+        A deterministic workflow engineered to minimize vehicle downtime and deliver flawless visual execution.
+      </p>
 
-    <div class="process-timeline">
-      <div class="process-item">
-        <div class="process-stage">STAGE 01 / SPECIFICATION</div>
-        <h3>Digital Scope & Objective</h3>
-        <p>Submit your vehicle specifications and branding requirements. Our senior engineers review your canvas and prepare a comprehensive proposal within 24 hours.</p>
-      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <span class="step-index">PHASE 01</span>
+          <h3>Scope & Fleet Audit</h3>
+          <p>
+            Detailed dimensional audit of your vehicle body panels, factory contours, and environmental operating requirements.
+          </p>
+        </div>
 
-      <div class="process-item">
-        <div class="process-stage">STAGE 02 / PROOFING</div>
-        <h3>Photorealistic 3D Render</h3>
-        <p>We generate precision 3D architectural renders illustrating logo placement, color calibration, and panel seams for your formal executive sign-off.</p>
-      </div>
+        <div class="process-step">
+          <span class="step-index">PHASE 02</span>
+          <h3>3D Visualization</h3>
+          <p>
+            Photorealistic 3D proofing ensuring logo positioning, contrast values, and emergency numbers are visible from highway angles.
+          </p>
+        </div>
 
-      <div class="process-item">
-        <div class="process-stage">STAGE 03 / INSTALLATION</div>
-        <h3>Cleanroom Application</h3>
-        <p>Certified 3M technicians complete the wrap inside our climate-controlled Houston facility, backed by our 5-year no-peel warranty.</p>
+        <div class="process-step">
+          <span class="step-index">PHASE 03</span>
+          <h3>Surface Decontamination</h3>
+          <p>
+            Multi stage chemical clay bar and alcohol wash in our cleanroom bay to remove road tar, silicones, and micro debris.
+          </p>
+        </div>
+
+        <div class="process-step">
+          <span class="step-index">PHASE 04</span>
+          <h3>Cleanroom Installation</h3>
+          <p>
+            Tension calibrated application by certified technicians followed by post heating seams to 200 degrees to eliminate memory recoil.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Frequently Addressed Inquiries -->
-  <section class="container">
-    <div class="section-head">
+  <!-- FAQ Section (KKR Institutional Q&A) -->
+  <section id="faq" class="faq-section">
+    <div class="container">
       <span class="section-eyebrow">Due Diligence</span>
       <h2 class="section-title">Frequently Addressed Inquiries</h2>
-    </div>
 
-    <div class="faq-wrapper">
-      <div class="faq-row">
-        <div class="faq-q">What is the lifespan of commercial cast vinyl in Texas climate?</div>
-        <div class="faq-a">When engineered with premium 3M or Avery Dennison cast vinyl and UV-resistant over-laminate, our commercial wraps maintain a rated service life of 5 to 7 years under standard Texas environmental conditions.</div>
-      </div>
-      <div class="faq-row">
-        <div class="faq-q">Does professional wrap installation affect factory OEM paint?</div>
-        <div class="faq-a">No. High-grade cast film actively protects the underlying factory clear-coat from UV degradation, road gravel, and abrasion. The original paint remains pristine upon professional removal.</div>
-      </div>
-      <div class="faq-row">
-        <div class="faq-q">What is the turnaround schedule per commercial vehicle?</div>
-        <div class="faq-a">Following digital proof approval, printing, laminating, and installation typically require 2 to 4 business days per vehicle to allow proper post-heating and adhesive cure.</div>
-      </div>
-      <div class="faq-row">
-        <div class="faq-q">Can you accommodate partial wraps and enterprise fleet decal kits?</div>
-        <div class="faq-a">Yes. We deliver solutions spanning full vehicle coverage, partial side/rear branding, perforated architectural window film, and precision cut vinyl lettering.</div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3 class="faq-question">What is the verified lifespan of a commercial vehicle wrap?</h3>
+          <p class="faq-answer">
+            Our 3M and Avery Dennison cast films provide an operational lifespan of 5 to 7 years when maintained with standard automotive cleaning practices. Every full wrap includes a 5 year surface warranty against premature fading, peeling, and lifting.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Will the vinyl removal process damage our factory paint?</h3>
+          <p class="faq-answer">
+            No. High grade cast vinyl utilizes clean release adhesives engineered specifically for OEM clearcoats. When removed by our technicians using controlled infrared heat, the factory paint underneath remains in original condition.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">What is the required turnaround time per commercial vehicle?</h3>
+          <p class="faq-answer">
+            A standard cargo van or pickup truck requires 2 to 3 business days from vehicle drop off to final delivery. For multi vehicle commercial fleets, we coordinate phased rolling schedules to keep your operations active.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Do you offer volume pricing for multi vehicle commercial fleets?</h3>
+          <p class="faq-answer">
+            Yes. Fleet deployments of 3 or more vehicles qualify for itemized volume tiering, synchronized print runs, and dedicated bay scheduling to minimize fleet idle time.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Discreet WhatsApp Concierge -->
-  <a href="https://wa.me/15551234567?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20commercial%20vehicle%20wrap." class="wa-concierge" target="_blank" rel="noopener" aria-label="WhatsApp Concierge">
-    <span class="wa-dot"></span>
-    <span>WhatsApp Concierge</span>
-  </a>
+  <!-- KKR Multi-Column Institutional Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <span class="brand-title" style="display: block; margin-bottom: 12px;">MSK Signs & Atelier</span>
+          <p>
+            Houston's premier commercial wrap atelier. Engineering high yield mobile visibility and surface preservation for enterprise commercial fleets.
+          </p>
+        </div>
 
-  <!-- Executive Footer -->
-  <footer>
-    <div class="container footer-inner">
-      <div>
-        <strong>MSK Signs & Atelier</strong> • 6121 Hillcroft Ave, Houston, TX 77081
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#overview">Executive Overview</a></li>
+            <li><a href="#pillars">Strategic Pillars</a></li>
+            <li><a href="#projects">Fleet Showcase</a></li>
+            <li><a href="#process">Execution Journey</a></li>
+            <li><a href="#faq">Due Diligence FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Houston Facility</h4>
+          <p>
+            MSK Signs & Atelier<br>
+            Commercial Fleet Division<br>
+            Houston, Texas 77002<br>
+            Operations: Monday through Friday, 8am to 6pm
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Direct Inquiries</h4>
+          <p>
+            Fleet Estimations: quotes@msksigns.com<br>
+            WhatsApp Hotline: +1 (555) 123 4567<br>
+            3M Certified Installation Center
+          </p>
+        </div>
       </div>
-      <div>
-        © 2026 MSK Wraps. Certified 3M™ Commercial Graphics Facility. All rights reserved.
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 MSK Signs & Atelier. All rights reserved. Commercial vehicle wraps and fleet branding solutions.</div>
+        <div>Houston, Texas | Private & Confidential Proposal Generation</div>
       </div>
     </div>
   </footer>
 
-  <!-- Form Logic & Webhook -->
+  <!-- Discreet Sticky WhatsApp Concierge Badge -->
+  <a href="https://wa.me/15551234567?text=Hi%2C%20I%20would%20like%20a%20commercial%20vehicle%20wrap%20proposal." target="_blank" rel="noopener noreferrer" class="whatsapp-badge">
+    <div class="whatsapp-icon-circle">
+      <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.062-2.121-.527-1.748-.721-2.885-2.502-2.973-2.617-.087-.116-.708-.941-.708-1.794s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+      </svg>
+    </div>
+    <div class="whatsapp-text">
+      WhatsApp Line
+      <span>Houston Atelier</span>
+    </div>
+  </a>
+
+  <!-- Frontend Logic & n8n Webhook Integration -->
   <script>
-    const WEBHOOK_URL = 'https://elections-reno-zones-betting.trycloudflare.com/webhook/vehicle-wrap-quote';
-
-    const form = document.getElementById('quoteForm');
-    const btnSubmit = document.getElementById('btnSubmit');
-    const successBox = document.getElementById('successBox');
-    const successMessage = document.getElementById('successMessage');
-    const displaySubId = document.getElementById('displaySubId');
-    const btnResetForm = document.getElementById('btnResetForm');
-    const networkErrorBox = document.getElementById('networkErrorBox');
-    const submissionIdInput = document.getElementById('submissionId');
-
-    const nameInput = document.getElementById('name');
-    const phoneInput = document.getElementById('phone');
-    const vehicleTypeInput = document.getElementById('vehicleType');
-    const businessInput = document.getElementById('business');
-    const messageInput = document.getElementById('message');
-    const honeypotInput = document.getElementById('website');
-
-    const nameError = document.getElementById('nameError');
-    const phoneError = document.getElementById('phoneError');
-    const vehicleTypeError = document.getElementById('vehicleTypeError');
-
-    // Segmented Vehicle Chips Selection
-    const vehicleChips = document.querySelectorAll('.v-chip');
-    vehicleChips.forEach(chip => {
-      chip.addEventListener('click', function() {
-        vehicleChips.forEach(c => c.classList.remove('active'));
-        this.classList.add('active');
-        vehicleTypeInput.value = this.getAttribute('data-value');
-        vehicleTypeError.style.display = 'none';
-      });
-    });
+    // Live Cloudflare Tunnel endpoint connected directly to local n8n instance
+    const WEBHOOK_URL = 'https://gore-offers-discovered-considered.trycloudflare.com/webhook/vehicle-wrap-quote';
 
     function generateSubmissionId() {
-      return 'sub_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 8);
-    }
-    submissionIdInput.value = generateSubmissionId();
-
-    function clearErrors() {
-      [nameInput, phoneInput].forEach(el => el.classList.remove('input-error'));
-      [nameError, phoneError, vehicleTypeError].forEach(el => {
-        el.style.display = 'none';
-        el.textContent = '';
-      });
-      networkErrorBox.style.display = 'none';
+      return 'sub_' + Date.now() + '_' + Math.random().toString(36).substring(2, 8);
     }
 
-    function showFieldError(field, message) {
-      if (field === 'name') {
-        nameInput.classList.add('input-error');
-        nameError.textContent = message;
-        nameError.style.display = 'block';
-        nameInput.focus();
-      } else if (field === 'phone') {
-        phoneInput.classList.add('input-error');
-        phoneError.textContent = message;
-        phoneError.style.display = 'block';
-        phoneInput.focus();
-      } else if (field === 'vehicleType') {
-        vehicleTypeError.textContent = message;
-        vehicleTypeError.style.display = 'block';
-      } else {
-        networkErrorBox.textContent = message;
-        networkErrorBox.style.display = 'block';
-      }
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('quoteForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const successBox = document.getElementById('successBox');
+      const resetBtn = document.getElementById('resetFormBtn');
+      const globalError = document.getElementById('formGlobalError');
+      const submissionIdInput = document.getElementById('submissionId');
 
-    function clientValidate() {
-      clearErrors();
-      let isValid = true;
-
-      const nameVal = nameInput.value.trim();
-      if (!nameVal || nameVal.length < 2) {
-        showFieldError('name', 'Please enter your full name (at least 2 characters).');
-        isValid = false;
-      }
-
-      const phoneVal = phoneInput.value.trim();
-      const phoneDigits = phoneVal.replace(/\D/g, '');
-      const phoneAllowed = /^[0-9+\s\-().]+$/;
-      if (!phoneVal) {
-        showFieldError('phone', 'A valid phone or WhatsApp number is required.');
-        isValid = false;
-      } else if (!phoneAllowed.test(phoneVal)) {
-        showFieldError('phone', 'Phone number contains invalid characters.');
-        isValid = false;
-      } else if (phoneDigits.length < 7) {
-        showFieldError('phone', 'Please enter a valid phone number (at least 7 digits).');
-        isValid = false;
-      }
-
-      if (!vehicleTypeInput.value) {
-        showFieldError('vehicleType', 'Please select a vehicle type.');
-        isValid = false;
-      }
-
-      return isValid;
-    }
-
-    // Submit Handler
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      if (btnSubmit.disabled) return;
-      if (!clientValidate()) return;
-
-      btnSubmit.disabled = true;
-      btnSubmit.innerHTML = '<span>Processing Specification...</span> <span style="opacity:0.7">⏳</span>';
-
-      const payload = {
-        name: nameInput.value.trim(),
-        business: businessInput.value.trim(),
-        phone: phoneInput.value.trim(),
-        vehicleType: vehicleTypeInput.value,
-        message: messageInput.value.trim(),
-        website: honeypotInput.value.trim(),
-        submissionId: submissionIdInput.value,
-        sourcePage: window.location.href
-      };
-
-      try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 12000);
-
-        const res = await fetch(WEBHOOK_URL, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify(payload),
-          signal: controller.signal
-        });
-        clearTimeout(timeoutId);
-
-        let data = {};
-        try {
-          data = await res.json();
-        } catch (jsonErr) {
-          data = { status: 'error', message: 'Non-JSON response received from server.' };
-        }
-
-        if (res.status === 400 || data.status === 'error') {
-          showFieldError(data.field || 'general', data.message || 'Please check your information and try again.');
-          btnSubmit.disabled = false;
-          btnSubmit.innerHTML = '<span>Request Proposal & 3D Proof</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
-          return;
-        }
-
-        // Success
-        form.style.display = 'none';
-        successBox.style.display = 'block';
-        displaySubId.textContent = 'Ref ID: ' + (payload.submissionId || 'SUB-PROCESSED');
-        if (data.message) {
-          successMessage.textContent = data.message;
-        }
-
-      } catch (err) {
-        console.error('Submission Network Error:', err);
-        networkErrorBox.innerHTML = '⚠️ <strong>Notice:</strong> Unable to connect to the quotation pipeline right now. Please <a href="https://wa.me/15551234567?text=Hi%2C%20I%20tried%20requesting%20a%20wrap%20quote" style="color: var(--gold-light); font-weight: 600; text-decoration: underline;" target="_blank">click here to message our engineers directly on WhatsApp</a>.';
-        networkErrorBox.style.display = 'block';
-        btnSubmit.disabled = false;
-        btnSubmit.innerHTML = '<span>Request Proposal & 3D Proof</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
-      }
-    });
-
-    btnResetForm.addEventListener('click', function() {
-      form.reset();
-      clearErrors();
       submissionIdInput.value = generateSubmissionId();
-      btnSubmit.disabled = false;
-      btnSubmit.innerHTML = '<span>Request Proposal & 3D Proof</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>';
-      successBox.style.display = 'none';
-      form.style.display = 'block';
+
+      function clearErrors() {
+        globalError.classList.remove('show');
+        globalError.textContent = '';
+        document.querySelectorAll('.form-control').forEach(el => el.classList.remove('is-invalid'));
+        document.querySelectorAll('.field-error').forEach(el => {
+          el.classList.remove('show');
+          el.textContent = '';
+        });
+      }
+
+      function showFieldError(field, message) {
+        let inputEl = null;
+        let errorEl = null;
+
+        if (field === 'name') {
+          inputEl = document.getElementById('fullName');
+          errorEl = document.getElementById('nameError');
+        } else if (field === 'phone') {
+          inputEl = document.getElementById('phone');
+          errorEl = document.getElementById('phoneError');
+        } else if (field === 'vehicleType') {
+          inputEl = document.getElementById('vehicleType');
+          errorEl = document.getElementById('vehicleTypeError');
+        } else if (field === 'business') {
+          inputEl = document.getElementById('businessName');
+          errorEl = document.getElementById('businessError');
+        } else if (field === 'message') {
+          inputEl = document.getElementById('message');
+          errorEl = document.getElementById('messageError');
+        }
+
+        if (inputEl && errorEl) {
+          inputEl.classList.add('is-invalid');
+          errorEl.textContent = message;
+          errorEl.classList.add('show');
+          inputEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          globalError.textContent = message;
+          globalError.classList.add('show');
+        }
+      }
+
+      function validateClient() {
+        let isValid = true;
+        clearErrors();
+
+        const name = document.getElementById('fullName').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const vehicle = document.getElementById('vehicleType').value;
+
+        if (!name || name.length < 2) {
+          showFieldError('name', 'Please enter your full name (minimum 2 characters).');
+          isValid = false;
+        }
+
+        const phoneDigits = phone.replace(/\D/g, '');
+        if (!phone) {
+          showFieldError('phone', 'A valid phone or WhatsApp number is required.');
+          isValid = false;
+        } else if (phoneDigits.length < 7 || phoneDigits.length > 15) {
+          showFieldError('phone', 'Phone number must contain between 7 and 15 digits.');
+          isValid = false;
+        }
+
+        if (!vehicle) {
+          showFieldError('vehicleType', 'Please select a vehicle category.');
+          isValid = false;
+        }
+
+        return isValid;
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (submitBtn.disabled) return;
+
+        if (!validateClient()) return;
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Processing Proposal...</span>';
+
+        const payload = {
+          name: document.getElementById('fullName').value.trim(),
+          business: document.getElementById('businessName').value.trim(),
+          phone: document.getElementById('phone').value.trim(),
+          vehicleType: document.getElementById('vehicleType').value,
+          message: document.getElementById('message').value.trim(),
+          website: document.getElementById('website').value,
+          submissionId: submissionIdInput.value,
+          sourcePage: window.location.href
+        };
+
+        try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 12000);
+
+          const res = await fetch(WEBHOOK_URL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload),
+            signal: controller.signal
+          });
+
+          clearTimeout(timeoutId);
+
+          if (!res.ok) {
+            if (res.status === 400) {
+              try {
+                const errData = await res.json();
+                showFieldError(errData.field, errData.message || 'Validation error.');
+              } catch {
+                globalError.textContent = 'Server validation failed. Please check your inputs.';
+                globalError.classList.add('show');
+              }
+            } else {
+              globalError.textContent = 'Our proposal server encountered a temporary delay. Please try again or reach our WhatsApp line directly.';
+              globalError.classList.add('show');
+            }
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<span>Generate Proposal Request</span><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>';
+            return;
+          }
+
+          let data;
+          try {
+            data = await res.json();
+          } catch {
+            data = { status: 'success', message: 'Thank you. Your proposal request has been recorded.' };
+          }
+
+          if (data.status === 'success') {
+            form.style.display = 'none';
+            if (data.message) {
+              document.getElementById('successMessageText').textContent = data.message;
+            }
+            successBox.classList.add('show');
+          } else {
+            globalError.textContent = data.message || 'An unexpected issue occurred.';
+            globalError.classList.add('show');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<span>Generate Proposal Request</span><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>';
+          }
+
+        } catch (err) {
+          globalError.textContent = 'Connection timeout. Your request may already be recorded. If needed, please contact our Houston atelier directly via WhatsApp.';
+          globalError.classList.add('show');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>Generate Proposal Request</span><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>';
+        }
+      });
+
+      resetBtn.addEventListener('click', () => {
+        form.reset();
+        clearErrors();
+        submissionIdInput.value = generateSubmissionId();
+        successBox.classList.remove('show');
+        form.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Generate Proposal Request</span><svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>';
+      });
     });
   </script>
 </body>
